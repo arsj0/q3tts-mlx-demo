@@ -1,8 +1,10 @@
-# Qwen3-TTS MLX Playground
+# Qwen3-TTS MLX UI
 
-A high-performance, local Text-to-Speech (TTS) playground utilizing **Qwen3-TTS** models running on Apple Silicon via the **MLX** framework.
+A local Text-to-Speech (TTS) UI utilizing **Qwen3-TTS** models running on Apple Silicon via the **MLX** framework.
 
 This project provides an interactive web interface (Gradio) for experimenting with high-fidelity speech synthesis.
+
+![App Screenshot](assets/demo-screen.png)
 
 ## Features
 
@@ -10,7 +12,7 @@ This project provides an interactive web interface (Gradio) for experimenting wi
 *   **Dual Modes:**
     *   **Custom Voice:** Select from 9 high-quality, predefined speakers (English, Chinese, Japanese, Korean).
     *   **Voice Design:** Zero-shot generation creating unique voices from natural language descriptions.
-*   **Interactive Playground:** web interface built with Gradio.
+*   **Interactive Interface:** web interface built with Gradio.
 *   **Multilingual:** Supports generation in English, Chinese, Japanese, Korean, German, French, Spanish, Italian, Portuguese, and Russian.
 
 ## Prerequisites
@@ -24,8 +26,7 @@ This project provides an interactive web interface (Gradio) for experimenting wi
 
 1.  **Clone the repository:**
 
-
-2.  **Create and activate a virtual environment (recommended):**
+2.  **Create and activate a virtual environment:**
     ```bash
     python3 -m venv venv
     source venv/bin/activate

@@ -143,7 +143,7 @@ theme = gr.themes.Soft(
 )
 
 with gr.Blocks(theme=theme, title="Qwen3-TTS Demo") as demo:
-    gr.Markdown("# Qwen3-TTS Demo (MLX)")
+    gr.Markdown("## Qwen3-TTS Demo (MLX)")
     gr.Markdown("Test the Qwen3-TTS models on MLX. Switch between **Custom Voice** and **Voice Design**.")
     
     with gr.Row():
