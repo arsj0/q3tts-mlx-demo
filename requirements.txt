@@ -1,0 +1,6 @@
+mlx-audio>=0.3.1
+mlx>=0.30.4
+gradio>=5.0.0
+numpy>=2.0.0
+soundfile>=0.13.1
+sounddevice>=0.5.3
