@@ -81,7 +81,7 @@ python app.py
 This project builds upon the work of the Qwen Team and the MLX Audio library.
 
 *   **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)**
-*   **[MLX Audio](https://github.com/Blaizzy/mlx-audio):**
+*   **[MLX Audio](https://github.com/Blaizzy/mlx-audio)**
 
 
 ```bibtex
