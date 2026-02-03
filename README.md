@@ -9,9 +9,10 @@ This project provides an interactive web interface (Gradio) for experimenting wi
 ## Features
 
 *   **Apple Silicon Optimized:** Leveraging `mlx` for efficient inference on M-series chips (M1/M2/M3/M4).
-*   **Dual Modes:**
+*   **3 Modes:**
     *   **Custom Voice:** Select from 9 high-quality, predefined speakers (English, Chinese, Japanese, Korean).
-    *   **Voice Design:** Zero-shot generation creating unique voices from natural language descriptions.
+    *   **Voice Design:** Create custom voices using natural language descriptions.
+    *   **Voice Clone:** Clone any voice from a reference audio.
 *   **Interactive Interface:** web interface built with Gradio.
 *   **Multilingual:** Supports generation in English, Chinese, Japanese, Korean, German, French, Spanish, Italian, Portuguese, and Russian.
 
@@ -53,11 +54,14 @@ Before running the app, you need to download the quantized models using the Hugg
     # Download Custom Voice Model (Predefined Speakers)
     hf download mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-8bit
 
-    # Download Voice Design Model (Zero-shot)
+    # Download Voice Design Model
     hf download mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit
+    
+    # Download Voice Clone Model (Base)
+    hf download mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit
     ```
 
-    *Note: If you wish to use different model variants (e.g. 0.6B, 4-bit or full precision), download them similarly and update the `MODEL_PATH_CV` and `MODEL_PATH_VD` variables in `app.py`.*
+    *Note: If you wish to use different model variants (e.g. 0.6B, 4-bit or full precision), download them similarly and update the `MODEL_PATH_CV`, `MODEL_PATH_VD`, and `MODEL_PATH_BASE` variables in `app.py`.*
 
 ## Usage
 
@@ -68,15 +72,18 @@ python app.py
 ```
 
 *   Open the local URL (typically `http://127.0.0.1:7860`).
-*   Switch between **Custom Voice** and **Voice Design**.
+*   Switch between **Custom Voice**, **Voice Design**, and **Voice Clone**.
 *   View speaker details, input text, and generate audio.
 
 
-## Citations
+## Acknowledgements
 
 This project builds upon the work of the Qwen Team and the MLX Audio library.
 
-**Qwen3-TTS:**
+*   **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)**
+*   **[MLX Audio](https://github.com/Blaizzy/mlx-audio):**
+
+
 ```bibtex
 @article{Qwen3-TTS,
   title={Qwen3-TTS Technical Report},
@@ -86,7 +93,6 @@ This project builds upon the work of the Qwen Team and the MLX Audio library.
 }
 ```
 
-**MLX Audio:**
 ```bibtex
 @misc{mlx-audio,
   author = {Canuma, Prince},
